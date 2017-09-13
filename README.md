@@ -1,19 +1,19 @@
 # MILP-aided-Cube-attack-like-cryptanalysis
 For Keccak-MAC-512, whose capacity is 1024-bit.
-	  1. Using SageMath, run file "Keccak51264_genlp.py" and obtain file "lpkeccak51264.lp" as a model in Gurobi.
-	  	 In this step we obtain the constrians in forms of inequations used by the MILP model.
-	  2. Using Gurobi, read and optimize the model file "lpkeccak51264.lp", 
-		then obtain the result file "keccakmac51264cube_min_key.sol",
-		i.e. the minimum of related key bits with 64-dimension linear cube is 95.
-		In this step we obtain the minimum of related key bits of our model/
-	  3. Using SageMath, run file "read.py" and print the unrelated key and the cube variables.
-	  4. Using SageMath, run file "Keccakmac512_verify_unrelatedkey.py" 
-	  	and verify the unrelated key bits do not multiply the 64-dimension cubes in the first round.
-		In this step we verify our solution of related key is right if output "0".
-	  5. Using SageMath, run file "Keccakmac512_verifyauxiliary.py" and verify the 48-bit related key bits with
-	    auxiliary variables do not multiply with the linear cubes in the first round.
-		 In this step we verify the auxiliary variables are right if output "0", if output"ki,vj" it means 
-		 the auxiliary variable for ki is multiplied with the cube variable vj.
+ 1. Using SageMath, run file "Keccak51264_genlp.py" and obtain file "lpkeccak51264.lp" as a model in Gurobi.
+In this step we obtain the constrians in forms of inequations used by the MILP model.
+2. Using Gurobi, read and optimize the model file "lpkeccak51264.lp", 
+then obtain the result file "keccakmac51264cube_min_key.sol",
+i.e. the minimum of related key bits with 64-dimension linear cube is 95.
+In this step we obtain the minimum of related key bits of our model/
+ 3. Using SageMath, run file "read.py" and print the unrelated key and the cube variables.
+ 4. Using SageMath, run file "Keccakmac512_verify_unrelatedkey.py" 
+and verify the unrelated key bits do not multiply the 64-dimension cubes in the first round.
+In this step we verify our solution of related key is right if output "0".
+5. Using SageMath, run file "Keccakmac512_verifyauxiliary.py" and verify the 48-bit related key bits with
+ auxiliary variables do not multiply with the linear cubes in the first round.
+In this step we verify the auxiliary variables are right if output "0", if output"ki,vj" it means 
+the auxiliary variable for ki is multiplied with the cube variable vj.
 		 
 		 
 		
