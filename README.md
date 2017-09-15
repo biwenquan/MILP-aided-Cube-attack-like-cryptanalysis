@@ -16,7 +16,22 @@ In this step we verify the auxiliary variables are right if output "0", if outpu
 the auxiliary variable for ki is multiplied with the cube variable vj.
 		 
 		 
-		
+
+For all the attcks in our paper, we list the verify programs codes in the master "verify_unrelatedkey" to
+  verify the unrelatedkey which is not multiplied with cube vairables in the first round. These programs are in python
+  and output "0" if not multiplied or "ki, vj" if ki and vj muliplies.
+  
+  
+For all the attcks in our paper, we list the verify programs codes in the master "verify_auxiliary_variables" to
+  verify the relatedkey bits with auxiliary variables  which is not multiplied with cube vairables in the first round
+  when the key bits and auxiliary variables equal. 
+  These programs are in python and output "0" if not multiplied or "ki, vj" if ki and vj muliplies. 
+  
+
+
+
+
+
 For Keccak-Mac-128, 
 Program "verifycube.cpp" tests that using the 18-bit related key and the 64-dimension linear cubes in Table 6 
 could recovery the right key when appling the MILP-aided cube-attack-like cryptanalysis on 6-round Keccak-MAC-128
