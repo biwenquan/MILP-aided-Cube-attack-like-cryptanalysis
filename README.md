@@ -33,7 +33,7 @@ For all the attcks in our paper, we list the verify programs codes in the master
 
 
 For Keccak-Mac-128, 
-Program "verifycube.cpp" tests that using the 18-bit related key and the 64-dimension linear cubes in Table 6 
+Program "verifycube.cpp" tests that using the 18-bit related key and the 32-dimension linear cubes in Table 6 
 could recovery the right key when appling the MILP-aided cube-attack-like cryptanalysis on 6-round Keccak-MAC-128
 in Section 6, it would print "right key is the right key" when the cubes sums computed by the right guessed key
 in the preprocessing phase equal to the cube sums computed by the auxiliary variables which are equal to the related key
